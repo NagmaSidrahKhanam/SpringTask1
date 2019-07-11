@@ -15,35 +15,21 @@ The Main class looks up Movie bean via three ways to print out actor information
 3. Using ApplicationContext
 Create a spring-xml-demo repo and push the code to master branch.
  */
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.support.BeanDefinitionReader;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.support.SimpleBeanDefinitionRegistry;
-//import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-//import org.springframework.beans.factory.xml.XmlBeanFactory;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.StaticApplicationContext;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.FileSystemResource;
+
 import com.spring.stackroute.domain.Movie;
+
 public class Main {
-    public static void main(String args[]) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie1 = context.getBean("movie1", Movie.class);
-        System.out.println(movie1.getActor1());
-        Movie movie2 = context.getBean("movie2", Movie.class);
-        System.out.println(movie2.getActor2());
-        Movie movie = context.getBean("movie", Movie.class);
+
+    public  static  void main(String gopal []) {
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        Movie movie=(Movie)applicationContext.getBean("movie2");
+        Movie movie2=(Movie)applicationContext.getBean("movie3");
+
         System.out.println(movie.getActor());
-        Movie movie4 = context.getBean("movie", Movie.class);
-        System.out.println(movie.getActor());
-
-
-        System.out.println(movie == movie4);
-
-
+        System.out.println(movie2.getActor());
     }
-
-    }
+}

@@ -3,31 +3,29 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean  id= "actor" class="com.spring.stackroute.domain.Actor">
-        <constructor-arg index="0" value="kajal"/>
-        <constructor-arg index="1" value="female"/>
-        <constructor-arg index="2" value="32"/>
-    </bean>
 
-    <bean  id= "actor1" class="com.spring.stackroute.domain.Actor">
-        <constructor-arg index="0" value="srk"/>
-        <constructor-arg index="1" value="male"/>
-        <constructor-arg index="2" value="50"/>
+    <bean id="actor" class="com.spring.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Khan"> </constructor-arg>
+        <constructor-arg index="1" value="female"> </constructor-arg>
+        <constructor-arg index="2" value="27"></constructor-arg>
 
     </bean>
 
-    <bean  id= "actor2" class="com.spring.stackroute.domain.Actor">
-        <constructor-arg index="0" value="PRABHAS"/>
-        <constructor-arg index="1" value="male"/>
-        <constructor-arg index="2" value="37"/>
+    <bean id="actor1" class="com.spring.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Nagma"> </constructor-arg>
+        <constructor-arg index="1" value="female"> </constructor-arg>
+        <constructor-arg index="2" value="23"></constructor-arg>
 
     </bean>
 
-    <bean id="movie" class="com.spring.stackroute.domain.Movie">
-        <property name="actor" ref="actor"></property></bean>
-    <bean id="movie1" class="com.spring.stackroute.domain.Movie">
-        <property name="actor1" ref="actor1"></property></bean>
-    <bean id="movie2" class="com.spring.stackroute.domain.Movie">
-        <property name="actor2" ref="actor2"></property></bean>
+
+
+
+    <bean id="movie2" autowire="byName" class="com.spring.stackroute.domain.Movie" >
+
+    </bean>
+    <bean id="movie3" autowire="byName" class="com.spring.stackroute.domain.Movie" >
+
+    </bean>
 
 </beans>

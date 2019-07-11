@@ -1,39 +1,44 @@
 package com.spring.stackroute.domain;
 
 public class Actor {
-public String name;
-public int age;
-public String gender;
+    private String name;
+    private String gender;
+    private int age;
+
+
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
+    }
+    public String getGender() {
+        return gender;
+    }
+    public int getAge() {
+        return age;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
-    public String getGender() {
-        return gender;
+    public String toString() {
+        return "Actor{" +
+                "name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                '}';
     }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-    public void display()
-    {
-        System.out.println("name is  : "+name);
-        System.out.println("age is  : "+age);
-        System.out.println("gender is  : "+gender);
-
-    }
-
 }

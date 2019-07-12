@@ -17,6 +17,8 @@ Create a spring-xml-demo repo and push the code to master branch.
  */
 
 import com.spring.stackroute.domain.BeanLifeCycleDemo;
+import com.spring.stackroute.domain.Beanpostprocessor;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -28,5 +30,6 @@ public class Main {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
         BeanLifeCycleDemo beanLifeCycleDemo=(BeanLifeCycleDemo) applicationContext.getBean("cycle");
+        BeanPostProcessor beanPostProcessor = applicationContext.getBean("postprocess", Beanpostprocessor.class);
     }
 }

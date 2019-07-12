@@ -2,10 +2,10 @@ package com.spring.stackroute.domain;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 
-public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
+public class BeanLifeCycleDemo implements InitializingBean, DisposableBean, BeanPostProcessor {
+
 
     public void Init ()
     {

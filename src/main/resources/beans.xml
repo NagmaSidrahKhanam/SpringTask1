@@ -5,6 +5,6 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="cycle" class="com.spring.stackroute.domain.BeanLifeCycleDemo" init-method="Init" destroy-method="clean" ></bean>
-
+<bean id="postprocess" class="com.spring.stackroute.domain.Beanpostprocessor"></bean>
 
 </beans>

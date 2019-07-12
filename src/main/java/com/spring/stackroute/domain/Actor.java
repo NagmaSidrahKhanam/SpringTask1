@@ -1,6 +1,7 @@
 package com.spring.stackroute.domain;
 
 public class Actor {
+
     private String name;
     private  String gender;
     private  int age;

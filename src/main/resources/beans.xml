@@ -5,26 +5,26 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="actor" class="com.spring.stackroute.domain.Actor">
-        <constructor-arg index="0" value="Khan"> </constructor-arg>
-        <constructor-arg index="1" value="female"> </constructor-arg>
-        <constructor-arg index="2" value="27"></constructor-arg>
-
-    </bean>
-
-    <bean id="actor1" class="com.spring.stackroute.domain.Actor">
         <constructor-arg index="0" value="Nagma"> </constructor-arg>
         <constructor-arg index="1" value="female"> </constructor-arg>
         <constructor-arg index="2" value="23"></constructor-arg>
 
     </bean>
 
-
-
-
-    <bean id="movie2" autowire="byName" class="com.spring.stackroute.domain.Movie" >
+    <bean id="actor1" class="com.spring.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Sidrah"> </constructor-arg>
+        <constructor-arg index="1" value="female"> </constructor-arg>
+        <constructor-arg index="2" value="25"></constructor-arg>
 
     </bean>
-    <bean id="movie3" autowire="byName" class="com.spring.stackroute.domain.Movie" >
+
+
+
+
+    <bean id="movie2" autowire="constructor" class="com.spring.stackroute.domain.Movie" >
+
+    </bean>
+    <bean id="movie3" autowire="constructor" class="com.spring.stackroute.domain.Movie" >
 
     </bean>
 

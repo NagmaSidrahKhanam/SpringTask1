@@ -28,4 +28,32 @@
 
     </bean>
 
+    <bean id="movie1" class="com.stackroute.spring.Movie" scope="singleton" autowire="byType">-->
+    <!--        <constructor-arg name="actor" ref="actor"> </constructor-arg>-->
+
+    <!--    </bean>-->
+
+    <!--    <bean id="actors"  class="com.stackroute.spring.Actor">-->
+
+
+    <!--        <constructor-arg name="name" index="0" value="radha" type="String"></constructor-arg>-->
+    <!--        <constructor-arg name="gender" index="1" value="female" type="String"></constructor-arg>-->
+    <!--        <constructor-arg name="age" index="2" value="26" type="int"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="actor2" class="com.stackroute.spring.Actor">-->
+
+
+    <!--        <constructor-arg name="name" index="0" value="sruthi" type="String"></constructor-arg>-->
+    <!--        <constructor-arg name="gender" index="1" value="female" type="String"></constructor-arg>-->
+    <!--        <constructor-arg name="age" index="2" value="28" type="int"></constructor-arg>-->
+    <!--    </bean>-->
+
+
+
+    <!--    <bean id="movie1" autowire="byName" class="com.stackroute.spring.Movie" scope="prototype">-->
+    <!--        <constructor-arg name="actor" ref="actor1"> </constructor-arg>-->
+
+    <!--    </bean>-->
+
 </beans>
